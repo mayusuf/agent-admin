@@ -9,7 +9,7 @@ import Agents from './pages/agents/Agents';
 import Billing from './pages/billing/Billing';
 import Prompts from './pages/prompts/Prompts';
 import Metrics from './pages/metrics/Metrics';
-import Logs from './pages/logs/Logs';
+import Logs from './pages/logs';
 import Settings from './pages/settings/Settings';
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
