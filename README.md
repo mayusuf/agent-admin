@@ -4,6 +4,12 @@ A professional dashboard for managing and monitoring AI agents, built with React
 
 **Version:** 1.0.0
 
+## 🌐 Live Demo
+
+**[View Live Demo](https://agent-admin-ten.vercel.app)**
+
+Experience the full functionality of the Agent Admin dashboard with the demo credentials below.
+
 ## Demo Credentials
 
 - **Email:** demo@yafitechbd.com
