@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #3B82F6;
+    --color-secondary: #6B7280;
+    --color-background: #F9FAFB;
+    --color-surface: #FFFFFF;
+    --color-text: #111827;
+    --color-text-secondary: #6B7280;
+    --color-border: #E5E7EB;
+    --color-accent: #10B981;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+
+  /* Dark mode support */
+  .dark {
+    --color-primary: #60A5FA;
+    --color-secondary: #9CA3AF;
+    --color-background: #111827;
+    --color-surface: #1F2937;
+    --color-text: #F9FAFB;
+    --color-text-secondary: #D1D5DB;
+    --color-border: #374151;
+    --color-accent: #34D399;
+  }
+
+  /* Ensure all text elements inherit theme colors */
+  h1, h2, h3, h4, h5, h6, p, span, div, label, input, textarea, select {
+    color: var(--color-text);
+  }
+
+  /* Input focus states */
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    @apply hover:opacity-90;
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+    @apply hover:opacity-90;
+  }
+  
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    @apply rounded-lg shadow-md p-6;
+  }
+
+  /* Theme-aware text colors */
+  .text-primary {
+    color: var(--color-primary) !important;
+  }
+
+  .text-secondary {
+    color: var(--color-text-secondary) !important;
+  }
+
+  .text-theme {
+    color: var(--color-text) !important;
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .bg-background {
+    background-color: var(--color-background);
+  }
+
+  .border-theme {
+    border-color: var(--color-border);
+  }
+
+  /* Form elements */
+  .form-input {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+
+  .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  }
+
+  /* Navigation items */
+  .nav-item {
+    color: var(--color-text-secondary);
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover {
+    color: var(--color-text);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-item.active {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  /* Dark mode specific adjustments */
+  .dark .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+} 
